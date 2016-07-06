@@ -1,12 +1,15 @@
 
-#directories
+### misc
 alias reload=". ~/.zshrc && cd -"
+alias lsofi="lsof -i tcp:3000"
+alias finddir='find . -type d -name '
+alias pug="ps ux | grep"
+alias k9="kill -9"
+alias sk9="sudo kill -9"
+alias ak47="killall"
 alias uuid="ruby -rsecurerandom -e 'puts SecureRandom.uuid'"
 
-
-#ember
-
-#npm,grunt
+### npm,grunt
 alias ni="npm install"
 alias nu="npm update"
 alias ncc="npm cache clean"
@@ -22,14 +25,14 @@ alias gt="grunt test"
 alias db="node-debug"
 alias nln="npm link"
 
-#bower
+### bower
 alias bi="bower install"
 alias boi="bower install"
 alias bis="bower install --save"
 alias bowu="bower update"
 alias bcc="bower cache clean"
 
-#em-cli
+### ember
 alias em="ember"
 alias es="ember server"
 alias esp="es --port"
@@ -63,7 +66,7 @@ alias rclis="rcli && es"
 alias rclib="rcli && ebw"
 alias stopwatch="watchman shutdown-server"
 
-###rails commands###
+### ruby, rails
 alias rs="bx rails s"
 alias bxrp="bxs -p"
 alias gemi="gem install"
@@ -96,7 +99,7 @@ alias prr="pry-remote"
 alias gard="guard -w spec"
 
 
-###git commands###
+### git
 alias ga="git add"
 alias gitcom="git commit"
 alias gb="git branch"
@@ -125,7 +128,7 @@ alias gu='gitup'
 #### nginx
 alias ngxr="sudo nginx -s reload"
 
-### heroku commands ###
+### heroku
 alias gphm="git push heroku master"
 alias hcreate="heroku apps:create"
 alias hr="heroku run"
@@ -133,16 +136,8 @@ alias hpgback="heroku pgbackups:capture --expire"
 alias hrr="hr rake"
 alias hlog="heroku logs" 
 
-#### misc
-alias lsofi="lsof -i tcp:3000"
-alias finddir='find . -type d -name '
-alias pug="ps ux | grep"
-alias k9="kill -9"
-alias sk9="sudo kill -9"
-alias ak47="killall"
 
-
-#elixir, phoenix
+### elixir, phoenix
 alias exx="elixir"
 alias exs="exx"
 alias m="mix"
@@ -175,6 +170,6 @@ alias mgj="mix phoenix.gen.json"  #e.g. mix phoenix.gen.json User users name:str
 alias mgm="mix phoenix.gen.model"
 alias mrs="mix run priv/repo/seeds.exs"
 
-## travis
+### travis
 alias trav-del-cache="travis cache --delete"
 
