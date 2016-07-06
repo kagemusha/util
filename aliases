@@ -1,0 +1,180 @@
+
+#directories
+alias reload=". ~/.zshrc && cd -"
+alias uuid="ruby -rsecurerandom -e 'puts SecureRandom.uuid'"
+
+
+#ember
+
+#npm,grunt
+alias ni="npm install"
+alias nu="npm update"
+alias ncc="npm cache clean"
+alias nis="ni --save-dev"
+alias nstart="npm start"
+alias ntest="npm test"
+alias nibi="ni && bower install"
+alias nst="npm start"
+alias nt="npm test"
+alias nglist="npm -g ls --depth=0"
+alias gs="grunt server"
+alias gt="grunt test"
+alias db="node-debug"
+alias nln="npm link"
+
+#bower
+alias bi="bower install"
+alias boi="bower install"
+alias bis="bower install --save"
+alias bowu="bower update"
+alias bcc="bower cache clean"
+
+#em-cli
+alias em="ember"
+alias es="ember server"
+alias esp="es --port"
+alias ei="ember install"
+alias en="ember new"
+alias et="ember test --port 4243"
+alias ets="ember test --serve"
+alias etsu="ember test --serve --filter=unit"
+alias nbs="ni && bi && es"
+alias nb="ni && bi"
+alias et1="ember test --port 4244"
+alias et2="ember test --port 4245"
+alias eb="ember build"
+alias ebp="eb --environment=production"
+alias ebw="eb --watch"
+alias eg="ember generate"
+alias egr="eg route"
+alias egc="eg component"
+alias egm="eg model"
+alias egmx="eg mixin"
+alias egs="eg service"
+alias egat="eg acceptance-test"
+alias edb="node debug node_modules/ember-cli/bin/ember"
+alias edp="ember deploy production"
+alias rebuildembinsp="cd ~/ember/ember-inspector && gpr && rm -rf node_modules bower_components && ni && bi && npm run build"
+alias lsnm="ls node_modules"
+alias clearcli="rm -rf node_modules bower_components tmp dist"
+alias resetcli="clearcli && bcc && ncc && ni && bi && es"
+alias rcli="rm -rf node_modules bower_components tmp dist && ni && bi"
+alias rclis="rcli && es"
+alias rclib="rcli && ebw"
+alias stopwatch="watchman shutdown-server"
+
+###rails commands###
+alias rs="bx rails s"
+alias bxrp="bxs -p"
+alias gemi="gem install"
+alias gemll="gem list --local"
+alias racnew="rails_apps_composer new"
+alias rac="rake assets:clobber"
+alias buni="bundle install"
+alias bx="bundle exec"
+alias bxr="bundle exec rake"
+alias bxrc="bx rails console"
+alias bxcr="bxrc"
+alias bxrm="bxr db:migrate"
+alias bxrdbr="bxr db:rollback"
+alias bxrs="bxr db:seed"
+alias cleanstart "be rakep clean && be rakep && foreman start"
+alias taild="tail -f log/development.log"
+
+alias dbreset="bxr db:drop db:create db:migrate db:seed db:test:prepare"
+alias resetme="buni && bower cache clean && bi && dbreset
+alias rg="rails generate"
+alias rgc="rg controller"
+alias rgm="rg model"
+alias rgr="rg resource"
+alias rgs="rg serializer"
+alias rgmig="rg migration"
+alias rd="rails destroy"
+alias rdc="rd controller"
+alias rdm="rd model"
+alias prr="pry-remote"
+alias gard="guard -w spec"
+
+
+###git commands###
+alias ga="git add"
+alias gitcom="git commit"
+alias gb="git branch"
+alias gc="git checkout"
+alias g-="gc -"
+alias gl="git log"
+alias gcb="git checkout -b"
+alias gpr="git pull --rebase"
+alias gp="git pull"
+alias gba="git for-each-ref --sort=-committerdate refs/heads/ --format='%(committerdate:short) %(authorname) %(refname:short)'"
+alias gstash="git stash"
+alias gspop="git stash pop"
+alias gri="git rebase -i"
+alias gitrename="git branch -m "
+alias gp1="git push --set-upstream origin"
+alias greb="git rebase"
+alias gtl="git tag -l" #to go to a tag gc tags/<tag-name>
+alias grhard="git reset --hard HEAD"
+alias gitupstream="git remote add upstream"
+alias gsui="git submodule update --init"
+alias rebaseup="git fetch upstream && gcm && git rebase upstream/master"
+alias gitfmup="git fetch upstream && git merge upstream/master"
+alias delmerged="git branch --merged | grep -v \* | grep -v '^\s*master$' | xargs -t -n 1 git branch -d"
+alias gu='gitup'
+
+#### nginx
+alias ngxr="sudo nginx -s reload"
+
+### heroku commands ###
+alias gphm="git push heroku master"
+alias hcreate="heroku apps:create"
+alias hr="heroku run"
+alias hpgback="heroku pgbackups:capture --expire"
+alias hrr="hr rake"
+alias hlog="heroku logs" 
+
+#### misc
+alias lsofi="lsof -i tcp:3000"
+alias finddir='find . -type d -name '
+alias pug="ps ux | grep"
+alias k9="kill -9"
+alias sk9="sudo kill -9"
+alias ak47="killall"
+
+
+#elixir, phoenix
+alias exx="elixir"
+alias exs="exx"
+alias m="mix"
+alias mn="mix new"
+alias mt="mix test"
+alias mtx="mix test --exclude skip"
+#alias mtep="mix test --exclude pending"
+alias mdg="mix deps.get"
+alias mps="mix phoenix.server"
+alias meb="mix escript.build"
+alias mereset="mix ecto.reset"
+alias merl="mix ecto.rollback"
+
+alias ism="iex -S mix"
+alias imps="iex -S mix phoenix.server"
+alias ismt="iex -S mix test"
+alias ismtx="iex -S mix test --exclude skip"
+alias hseed="heroku run mix run priv/repo/seeds.exs"
+
+alias phn="mix phoenix.new"
+alias mpn="phn"
+alias mpr="mix phoenix.routes"
+alias routes="mix phoenix.routes"
+alias mec="mix ecto.create"
+#alias med="mix ecto.drop"
+alias mem="mix ecto.migrate"
+alias mgmig="mix ecto.gen.migration"
+alias mgh="mix phoenix.gen.html"
+alias mgj="mix phoenix.gen.json"  #e.g. mix phoenix.gen.json User users name:string age:integer
+alias mgm="mix phoenix.gen.model"
+alias mrs="mix run priv/repo/seeds.exs"
+
+## travis
+alias trav-del-cache="travis cache --delete"
+
